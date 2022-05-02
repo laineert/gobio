@@ -3,3 +3,7 @@ The goal of this group project is to build a raspberry pi supercomputer with fou
 research: we will need 4 raspberry pi's. we will then need to assemble them so that they are all sitting on top of each other. We will have to connect each one to an ethernet switch and to power. In the following steps raspbian will need to be installed on four different micro SD cards (one for each raspberry pi). after inserting the micro SD cards, we must obtain the IP address. 
 >Materials: 4 raspberry pi nodes, 4 ethernet cables, 4 micro SD cards, 1 PC computer with a mciro SD port
 I have a raspberry pi with an sd card and some ethernet cables, after i acquire another one I can make a two node prototype before we get the other two. Self research is being done.
+I also have a raspberry pi node that will help contribute to the build. I am researching details of the project as well. 
+Group meeting: As a group, a designated time was picked to start assemling the raspberry pi, and pictures of our progress was taken. 
+After completion, the 4 node raspberry pi was then ready to be synced. 
+A discussion within our group concluded a powerpoint will be made to showcase our results along with a physical representation of our 4 node raspberry pi cluster. 
