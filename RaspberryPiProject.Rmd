@@ -1,0 +1,69 @@
+---
+title: "RaspberryPiProject"
+author: "Keegan Carter, Bailey Carpenter, Lainee Taylor, and Gabriel Wakefield"
+date: "4/2/2022"
+output: html_document
+---
+#Creating A Raspberry Pi Supercomputer 
+This document will show the steps that were taken to successfully create a raspberry pi supercomputer.
+>A raspbery pi is a small computer that is affordable! Raspberry pi's use a programming language called python. These mini computers can be used for things such as home security systems, robots, and web servers. 
+-There are several components that make up a raspberry pi such as:
+-CPU
+-RAM
+-general purpose input and output connector
+-ethernet connectors
+-USB ports
+-audio jacks and many more 
+
+##methods 
+1. Do the research 
+2. Order the supplies needed
+3. Assemble each raspberry pi into its casing
+4. Attach the raspberry pi's to make a cluster 
+5. Sync the cluster together using a monitor
+
+###research 
+Each member of the group did their own research as to how to assemble a raspberry pi, what its function is, and how it works. 
+
+###Supplies 
+To create a raspberry pi supercomputer with 4 nodes we used: 
+-4 raspberry pi 
+-4 ethernet cables 
+-1 ethernet hub 
+-4 micro SD cards 
+-4 power cords
+-1 power strip
+-1 cluster case 
+-1 desktop monitor 
+-4 HDMI cords 
+
+###Assembly 
+To assemble the raspberry pi's into a cluster we had to screw each fan into the casing for the pi's. We then were able to screw each pi on top of each other like a stack of pancakes. 
+>Each pi was connected to its own power source. Next, ethernet cables were connected to each pi, and then to the central ethernet hub. 
+> After this, each micro SD card had to be synced together so that they would function as one unit. 
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
