@@ -17,10 +17,11 @@ This document will show the steps that were taken to successfully create a raspb
 
 ##methods 
 1. Do the research 
-2. Order the supplies needed
-3. Assemble each raspberry pi into its casing
-4. Attach the raspberry pi's to make a cluster 
-5. Sync the cluster together using a monitor
+2. Figure out where to obtain the supplies
+3. Order the supplies needed
+4. Assemble each raspberry pi into the casing along with the fans
+5. Attach the raspberry pi's to make a cluster 
+6. Sync the cluster together using a monitor
 
 ###research 
 Each member of the group did their own research as to how to assemble a raspberry pi, what its function is, and how it works. 
