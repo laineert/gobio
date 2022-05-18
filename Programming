@@ -1,1 +1,495 @@
-test
+Microsoft Windows [Version 10.0.19044.1645]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\gabej>ssh fishy@8.40.198.78
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:hQTltWFXpeOIVl0Jguia3uxsHgyKeOPFpUIXY5P1drY.
+Please contact your system administrator.
+Add correct host key in C:\\Users\\gabej/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in C:\\Users\\gabej/.ssh/known_hosts:1
+ECDSA host key for 8.40.198.78 has changed and you have requested strict checking.
+Host key verification failed.
+
+C:\Users\gabej>ssh fishy@8.40.198.78
+The authenticity of host '8.40.198.78 (8.40.198.78)' can't be established.
+ECDSA key fingerprint is SHA256:hQTltWFXpeOIVl0Jguia3uxsHgyKeOPFpUIXY5P1drY.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '8.40.198.78' (ECDSA) to the list of known hosts.
+fishy@8.40.198.78's password:
+Linux pim 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Apr  4 09:42:24 2022
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+fishy@pim:~ $ sudo apt update
+Hit:1 http://deb.debian.org/debian bullseye InRelease
+Get:2 http://deb.debian.org/debian bullseye-updates InRelease [39.4 kB]
+Get:3 http://security.debian.org/debian-security bullseye-security InRelease [44.1 kB]
+Get:4 http://archive.raspberrypi.org/debian bullseye InRelease [23.7 kB]
+Get:5 http://security.debian.org/debian-security bullseye-security/main arm64 Packages [125 kB]
+Get:6 http://security.debian.org/debian-security bullseye-security/main armhf Packages [128 kB]
+Get:7 http://security.debian.org/debian-security bullseye-security/main Translation-en [81.5 kB]
+Get:8 http://archive.raspberrypi.org/debian bullseye/main arm64 Packages [276 kB]
+Get:9 http://archive.raspberrypi.org/debian bullseye/main armhf Packages [282 kB]
+Fetched 999 kB in 5s (196 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+fishy@pim:~ $ sudo apt upgrade -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  gzip libcamera0 liblzma5 libraspberrypi-bin libraspberrypi-dev libraspberrypi-doc libraspberrypi0 pi-bluetooth
+  raspi-config rpi-eeprom userconf-pi xz-utils
+12 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,631 kB of archives.
+After this operation, 1,597 kB of additional disk space will be used.
+Get:1 http://security.debian.org/debian-security bullseye-security/main arm64 gzip arm64 1.10-4+deb11u1 [129 kB]
+Get:2 http://security.debian.org/debian-security bullseye-security/main arm64 liblzma5 arm64 5.2.5-2.1~deb11u1 [165 kB]
+Get:3 http://security.debian.org/debian-security bullseye-security/main arm64 xz-utils arm64 5.2.5-2.1~deb11u1 [219 kB]
+Get:4 http://archive.raspberrypi.org/debian bullseye/main arm64 libcamera0 arm64 0~git20220426+18e68a9b-1 [760 kB]
+Get:5 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-dev arm64 1:2+git20220324~090146+c4fd1b8-1 [129 kB]
+Get:6 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-bin arm64 1:2+git20220324~090146+c4fd1b8-1 [70.1 kB]
+Get:7 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi0 arm64 1:2+git20220324~090146+c4fd1b8-1 [78.3 kB]
+Get:8 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-doc all 1:2+git20220324~090146+c4fd1b8-1 [1,908 B]
+Get:9 http://archive.raspberrypi.org/debian bullseye/main arm64 pi-bluetooth all 0.1.19 [5,764 B]
+Get:10 http://archive.raspberrypi.org/debian bullseye/main arm64 raspi-config all 20220425 [30.3 kB]
+Get:11 http://archive.raspberrypi.org/debian bullseye/main arm64 rpi-eeprom arm64 13.13-1 [2,037 kB]
+Get:12 http://archive.raspberrypi.org/debian bullseye/main arm64 userconf-pi all 0.2 [5,736 B]
+Fetched 3,631 kB in 2s (2,091 kB/s)
+apt-listchanges: Reading changelogs...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../gzip_1.10-4+deb11u1_arm64.deb ...
+Unpacking gzip (1.10-4+deb11u1) over (1.10-4) ...
+Setting up gzip (1.10-4+deb11u1) ...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../liblzma5_5.2.5-2.1~deb11u1_arm64.deb ...
+Unpacking liblzma5:arm64 (5.2.5-2.1~deb11u1) over (5.2.5-2) ...
+Setting up liblzma5:arm64 (5.2.5-2.1~deb11u1) ...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../0-xz-utils_5.2.5-2.1~deb11u1_arm64.deb ...
+Unpacking xz-utils (5.2.5-2.1~deb11u1) over (5.2.5-2) ...
+Preparing to unpack .../1-libcamera0_0~git20220426+18e68a9b-1_arm64.deb ...
+Unpacking libcamera0:arm64 (0~git20220426+18e68a9b-1) over (0~git20220303+e68e0f1e-1) ...
+Preparing to unpack .../2-libraspberrypi-dev_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi-dev (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../3-libraspberrypi-bin_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi-bin (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../4-libraspberrypi0_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi0:arm64 (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../5-libraspberrypi-doc_1%3a2+git20220324~090146+c4fd1b8-1_all.deb ...
+Unpacking libraspberrypi-doc (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../6-pi-bluetooth_0.1.19_all.deb ...
+Unpacking pi-bluetooth (0.1.19) over (0.1.18) ...
+Preparing to unpack .../7-raspi-config_20220425_all.deb ...
+Unpacking raspi-config (20220425) over (20220331) ...
+Preparing to unpack .../8-rpi-eeprom_13.13-1_arm64.deb ...
+Unpacking rpi-eeprom (13.13-1) over (13.12-1) ...
+Preparing to unpack .../9-userconf-pi_0.2_all.deb ...
+Unpacking userconf-pi (0.2) over (0.1) ...
+Setting up pi-bluetooth (0.1.19) ...
+Setting up xz-utils (5.2.5-2.1~deb11u1) ...
+Setting up libraspberrypi0:arm64 (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up libcamera0:arm64 (0~git20220426+18e68a9b-1) ...
+Setting up raspi-config (20220425) ...
+Setting up userconf-pi (0.2) ...
+Setting up libraspberrypi-bin (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up libraspberrypi-dev (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up rpi-eeprom (13.13-1) ...
+Setting up libraspberrypi-doc (1:2+git20220324~090146+c4fd1b8-1) ...
+Processing triggers for libc-bin (2.31-13+rpt2+rpi1+deb11u2) ...
+Processing triggers for man-db (2.9.4-2) ...
+fishy@pim:~ $ sudo nano /boot/cmdline.txt
+fishy@pim:~ $ sudo catnano /boot/cmdline.txt
+sudo: catnano: command not found
+fishy@pim:~ $ sudo cat /boot/cmdline.txt
+console=serial0,115200 console=tty1 root=PARTUUID=f1716213-02 rootfstype=ext4 fsck.repair=yes rootwait cgroup_memory=1 cgroup_enable=memory
+fishy@pim:~ $ sudo reboot
+Connection to 8.40.198.78 closed by remote host.
+Connection to 8.40.198.78 closed.
+
+C:\Users\gabej>ssh fishy@8.40.198.78
+fishy@8.40.198.78's password:
+Linux pim 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon May  2 02:23:08 2022
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+fishy@pim:~ $ curl -sfL https://get.k3s.io | sh -
+[INFO]  Finding release for channel stable
+[INFO]  Using v1.22.7+k3s1 as release
+[INFO]  Downloading hash https://github.com/k3s-io/k3s/releases/download/v1.22.7+k3s1/sha256sum-arm64.txt
+[INFO]  Downloading binary https://github.com/k3s-io/k3s/releases/download/v1.22.7+k3s1/k3s-arm64
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Skipping installation of SELinux RPM
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Creating /usr/local/bin/ctr symlink to k3s
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s.service
+[INFO]  systemd: Enabling k3s unit
+Created symlink /etc/systemd/system/multi-user.target.wants/k3s.service → /etc/systemd/system/k3s.service.
+[INFO]  systemd: Starting k3s
+fishy@pim:~ $ sudo kubectl get nodes
+NAME   STATUS   ROLES                  AGE   VERSION
+pim    Ready    control-plane,master   73s   v1.22.7+k3s1
+fishy@pim:~ $ sudo cat /var/lib/rancher/k3s/server/node-token
+K1061db9444c18d991327a05d088ed202bff08de8fbca0f40353c3018c69e115afb::server:0f3d371d5a525eac57791d32dcc6d3d5
+fishy@pim:~ $ exit
+logout
+Connection to 8.40.198.78 closed.
+
+C:\Users\gabej>ssh fishy@8.40.207.138
+fishy@8.40.207.138's password:
+Linux pi1 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon May  2 02:10:21 2022 from 216.240.255.89
+.
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+fishy@pi1:~ $ sudo apt update
+Hit:1 http://deb.debian.org/debian bullseye InRelease
+Get:2 http://deb.debian.org/debian bullseye-updates InRelease [39.4 kB]
+Get:3 http://security.debian.org/debian-security bullseye-security InRelease [44.1 kB]
+Get:4 http://archive.raspberrypi.org/debian bullseye InRelease [23.7 kB]
+Get:5 http://security.debian.org/debian-security bullseye-security/main arm64 Packages [125 kB]
+Get:6 http://security.debian.org/debian-security bullseye-security/main armhf Packages [128 kB]
+Get:7 http://security.debian.org/debian-security bullseye-security/main Translation-en [81.5 kB]
+Get:8 http://archive.raspberrypi.org/debian bullseye/main armhf Packages [282 kB]
+Get:9 http://archive.raspberrypi.org/debian bullseye/main arm64 Packages [276 kB]
+Fetched 999 kB in 3s (354 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+fishy@pi1:~ $ sudo apt upgrade -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  gzip libcamera0 liblzma5 libraspberrypi-bin libraspberrypi-dev libraspberrypi-doc libraspberrypi0 pi-bluetooth
+  raspi-config rpi-eeprom userconf-pi xz-utils
+12 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,631 kB of archives.
+After this operation, 1,597 kB of additional disk space will be used.
+Get:1 http://security.debian.org/debian-security bullseye-security/main arm64 gzip arm64 1.10-4+deb11u1 [129 kB]
+Get:2 http://security.debian.org/debian-security bullseye-security/main arm64 liblzma5 arm64 5.2.5-2.1~deb11u1 [165 kB]
+Get:3 http://security.debian.org/debian-security bullseye-security/main arm64 xz-utils arm64 5.2.5-2.1~deb11u1 [219 kB]
+Get:4 http://archive.raspberrypi.org/debian bullseye/main arm64 libcamera0 arm64 0~git20220426+18e68a9b-1 [760 kB]
+Get:5 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-dev arm64 1:2+git20220324~090146+c4fd1b8-1 [129 kB]
+Get:6 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-bin arm64 1:2+git20220324~090146+c4fd1b8-1 [70.1 kB]
+Get:7 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi0 arm64 1:2+git20220324~090146+c4fd1b8-1 [78.3 kB]
+Get:8 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-doc all 1:2+git20220324~090146+c4fd1b8-1 [1,908 B]
+Get:9 http://archive.raspberrypi.org/debian bullseye/main arm64 pi-bluetooth all 0.1.19 [5,764 B]
+Get:10 http://archive.raspberrypi.org/debian bullseye/main arm64 raspi-config all 20220425 [30.3 kB]
+Get:11 http://archive.raspberrypi.org/debian bullseye/main arm64 rpi-eeprom arm64 13.13-1 [2,037 kB]
+Get:12 http://archive.raspberrypi.org/debian bullseye/main arm64 userconf-pi all 0.2 [5,736 B]
+Fetched 3,631 kB in 2s (2,411 kB/s)
+apt-listchanges: Reading changelogs...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../gzip_1.10-4+deb11u1_arm64.deb ...
+Unpacking gzip (1.10-4+deb11u1) over (1.10-4) ...
+Setting up gzip (1.10-4+deb11u1) ...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../liblzma5_5.2.5-2.1~deb11u1_arm64.deb ...
+Unpacking liblzma5:arm64 (5.2.5-2.1~deb11u1) over (5.2.5-2) ...
+Setting up liblzma5:arm64 (5.2.5-2.1~deb11u1) ...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../0-xz-utils_5.2.5-2.1~deb11u1_arm64.deb ...
+Unpacking xz-utils (5.2.5-2.1~deb11u1) over (5.2.5-2) ...
+Preparing to unpack .../1-libcamera0_0~git20220426+18e68a9b-1_arm64.deb ...
+Unpacking libcamera0:arm64 (0~git20220426+18e68a9b-1) over (0~git20220303+e68e0f1e-1) ...
+Preparing to unpack .../2-libraspberrypi-dev_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi-dev (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../3-libraspberrypi-bin_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi-bin (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../4-libraspberrypi0_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi0:arm64 (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../5-libraspberrypi-doc_1%3a2+git20220324~090146+c4fd1b8-1_all.deb ...
+Unpacking libraspberrypi-doc (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../6-pi-bluetooth_0.1.19_all.deb ...
+Unpacking pi-bluetooth (0.1.19) over (0.1.18) ...
+Preparing to unpack .../7-raspi-config_20220425_all.deb ...
+Unpacking raspi-config (20220425) over (20220331) ...
+Preparing to unpack .../8-rpi-eeprom_13.13-1_arm64.deb ...
+Unpacking rpi-eeprom (13.13-1) over (13.12-1) ...
+Preparing to unpack .../9-userconf-pi_0.2_all.deb ...
+Unpacking userconf-pi (0.2) over (0.1) ...
+Setting up pi-bluetooth (0.1.19) ...
+Setting up xz-utils (5.2.5-2.1~deb11u1) ...
+Setting up libraspberrypi0:arm64 (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up libcamera0:arm64 (0~git20220426+18e68a9b-1) ...
+Setting up raspi-config (20220425) ...
+Setting up userconf-pi (0.2) ...
+Setting up libraspberrypi-bin (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up libraspberrypi-dev (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up rpi-eeprom (13.13-1) ...
+Setting up libraspberrypi-doc (1:2+git20220324~090146+c4fd1b8-1) ...
+Processing triggers for libc-bin (2.31-13+rpt2+rpi1+deb11u2) ...
+Processing triggers for man-db (2.9.4-2) ...
+fishy@pi1:~ $ sudo nano /boot/cmdline.txt
+fishy@pi1:~ $ curl -sfL https://get.k3s.io | K3S_URL=https://8.40.198.78:6443 K3S_TOKEN=K1061db9444c18d991327a05d088ed202bff08de8fbca0f40353c3018c69e115afb::server:0f3d371d5a525eac57791d32dcc6d3d5 sh -
+[INFO]  Finding release for channel stable
+[INFO]  Using v1.22.7+k3s1 as release
+[INFO]  Downloading hash https://github.com/k3s-io/k3s/releases/download/v1.22.7+k3s1/sha256sum-arm64.txt
+[INFO]  Downloading binary https://github.com/k3s-io/k3s/releases/download/v1.22.7+k3s1/k3s-arm64
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Skipping installation of SELinux RPM
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Creating /usr/local/bin/ctr symlink to k3s
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-agent-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s-agent.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s-agent.service
+[INFO]  Failed to find memory cgroup, you may need to add "cgroup_memory=1 cgroup_enable=memory" to your linux cmdline (/boot/cmdline.txt on a Raspberry Pi)
+[INFO]  systemd: Enabling k3s-agent unit
+Created symlink /etc/systemd/system/multi-user.target.wants/k3s-agent.service → /etc/systemd/system/k3s-agent.service.
+[INFO]  systemd: Starting k3s-agent
+fishy@pi1:~ $ sudo reboot
+Connection to 8.40.207.138 closed by remote host.
+Connection to 8.40.207.138 closed.
+
+C:\Users\gabej>ssh fishy@8.40.198.78
+fishy@8.40.198.78's password:
+Linux pim 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon May  2 02:23:32 2022 from 216.240.255.89
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+fishy@pim:~ $ sudo kubectl get nodes
+NAME   STATUS   ROLES                  AGE   VERSION
+pim    Ready    control-plane,master   15m   v1.22.7+k3s1
+pi1    Ready    <none>                 24s   v1.22.7+k3s1
+fishy@pim:~ $ exit
+logout
+Connection to 8.40.198.78 closed.
+
+C:\Users\gabej>ssh fishy@67.202.180.201
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:eS7etJAB0ijHbzWmSifb/Ekf7YUxzVocB9THyfW2fM0.
+Please contact your system administrator.
+Add correct host key in C:\\Users\\gabej/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in C:\\Users\\gabej/.ssh/known_hosts:2
+ECDSA host key for 67.202.180.201 has changed and you have requested strict checking.
+Host key verification failed.
+
+C:\Users\gabej>ssh fishy@67.202.180.201
+The authenticity of host '67.202.180.201 (67.202.180.201)' can't be established.
+ECDSA key fingerprint is SHA256:eS7etJAB0ijHbzWmSifb/Ekf7YUxzVocB9THyfW2fM0.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '67.202.180.201' (ECDSA) to the list of known hosts.
+fishy@67.202.180.201's password:
+Linux pi2 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Apr  4 09:42:25 2022
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+fishy@pi2:~ $ sudo apt update
+Hit:1 http://deb.debian.org/debian bullseye InRelease
+Get:2 http://deb.debian.org/debian bullseye-updates InRelease [39.4 kB]
+Get:3 http://security.debian.org/debian-security bullseye-security InRelease [44.1 kB]
+Get:4 http://archive.raspberrypi.org/debian bullseye InRelease [23.7 kB]
+Get:5 http://security.debian.org/debian-security bullseye-security/main armhf Packages [128 kB]
+Get:6 http://security.debian.org/debian-security bullseye-security/main arm64 Packages [125 kB]
+Get:7 http://security.debian.org/debian-security bullseye-security/main Translation-en [81.5 kB]
+Get:8 http://archive.raspberrypi.org/debian bullseye/main armhf Packages [282 kB]
+Get:9 http://archive.raspberrypi.org/debian bullseye/main arm64 Packages [276 kB]
+Fetched 999 kB in 3s (344 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+fishy@pi2:~ $ sudo apt upgrade -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  gzip libcamera0 liblzma5 libraspberrypi-bin libraspberrypi-dev libraspberrypi-doc libraspberrypi0 pi-bluetooth raspi-config rpi-eeprom userconf-pi xz-utils
+12 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,631 kB of archives.
+After this operation, 1,597 kB of additional disk space will be used.
+Get:1 http://security.debian.org/debian-security bullseye-security/main arm64 gzip arm64 1.10-4+deb11u1 [129 kB]
+Get:2 http://security.debian.org/debian-security bullseye-security/main arm64 liblzma5 arm64 5.2.5-2.1~deb11u1 [165 kB]
+Get:3 http://security.debian.org/debian-security bullseye-security/main arm64 xz-utils arm64 5.2.5-2.1~deb11u1 [219 kB]
+Get:4 http://archive.raspberrypi.org/debian bullseye/main arm64 libcamera0 arm64 0~git20220426+18e68a9b-1 [760 kB]
+Get:5 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-dev arm64 1:2+git20220324~090146+c4fd1b8-1 [129 kB]
+Get:6 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-bin arm64 1:2+git20220324~090146+c4fd1b8-1 [70.1 kB]
+Get:7 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi0 arm64 1:2+git20220324~090146+c4fd1b8-1 [78.3 kB]
+Get:8 http://archive.raspberrypi.org/debian bullseye/main arm64 libraspberrypi-doc all 1:2+git20220324~090146+c4fd1b8-1 [1,908 B]
+Get:9 http://archive.raspberrypi.org/debian bullseye/main arm64 pi-bluetooth all 0.1.19 [5,764 B]
+Get:10 http://archive.raspberrypi.org/debian bullseye/main arm64 raspi-config all 20220425 [30.3 kB]
+Get:11 http://archive.raspberrypi.org/debian bullseye/main arm64 rpi-eeprom arm64 13.13-1 [2,037 kB]
+Get:12 http://archive.raspberrypi.org/debian bullseye/main arm64 userconf-pi all 0.2 [5,736 B]
+Fetched 3,631 kB in 1s (2,423 kB/s)
+apt-listchanges: Reading changelogs...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../gzip_1.10-4+deb11u1_arm64.deb ...
+Unpacking gzip (1.10-4+deb11u1) over (1.10-4) ...
+Setting up gzip (1.10-4+deb11u1) ...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../liblzma5_5.2.5-2.1~deb11u1_arm64.deb ...
+Unpacking liblzma5:arm64 (5.2.5-2.1~deb11u1) over (5.2.5-2) ...
+Setting up liblzma5:arm64 (5.2.5-2.1~deb11u1) ...
+(Reading database ... 35576 files and directories currently installed.)
+Preparing to unpack .../0-xz-utils_5.2.5-2.1~deb11u1_arm64.deb ...
+Unpacking xz-utils (5.2.5-2.1~deb11u1) over (5.2.5-2) ...
+Preparing to unpack .../1-libcamera0_0~git20220426+18e68a9b-1_arm64.deb ...
+Unpacking libcamera0:arm64 (0~git20220426+18e68a9b-1) over (0~git20220303+e68e0f1e-1) ...
+Preparing to unpack .../2-libraspberrypi-dev_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi-dev (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../3-libraspberrypi-bin_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi-bin (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../4-libraspberrypi0_1%3a2+git20220324~090146+c4fd1b8-1_arm64.deb ...
+Unpacking libraspberrypi0:arm64 (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../5-libraspberrypi-doc_1%3a2+git20220324~090146+c4fd1b8-1_all.deb ...
+Unpacking libraspberrypi-doc (1:2+git20220324~090146+c4fd1b8-1) over (1:2+git20211125~155417+14b90ff-3) ...
+Preparing to unpack .../6-pi-bluetooth_0.1.19_all.deb ...
+Unpacking pi-bluetooth (0.1.19) over (0.1.18) ...
+Preparing to unpack .../7-raspi-config_20220425_all.deb ...
+Unpacking raspi-config (20220425) over (20220331) ...
+Preparing to unpack .../8-rpi-eeprom_13.13-1_arm64.deb ...
+Unpacking rpi-eeprom (13.13-1) over (13.12-1) ...
+Preparing to unpack .../9-userconf-pi_0.2_all.deb ...
+Unpacking userconf-pi (0.2) over (0.1) ...
+Setting up pi-bluetooth (0.1.19) ...
+Setting up xz-utils (5.2.5-2.1~deb11u1) ...
+Setting up libraspberrypi0:arm64 (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up libcamera0:arm64 (0~git20220426+18e68a9b-1) ...
+Setting up raspi-config (20220425) ...
+Setting up userconf-pi (0.2) ...
+Setting up libraspberrypi-bin (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up libraspberrypi-dev (1:2+git20220324~090146+c4fd1b8-1) ...
+Setting up rpi-eeprom (13.13-1) ...
+Setting up libraspberrypi-doc (1:2+git20220324~090146+c4fd1b8-1) ...
+Processing triggers for libc-bin (2.31-13+rpt2+rpi1+deb11u2) ...
+Processing triggers for man-db (2.9.4-2) ...
+fishy@pi2:~ $ sudo nano /boot/cmdline.txt
+fishy@pi2:~ $ curl -sfL https://get.k3s.io | K3S_URL=https://8.40.198.78:6443 K3S_TOKEN=K1061db9444c18d991327a05d088ed202bff08de8fbca0f40353c3018c69e115afb::server:0f3d371d5a525eac57791d32dcc6d3d5 sh -
+[INFO]  Finding release for channel stable
+[INFO]  Using v1.22.7+k3s1 as release
+[INFO]  Downloading hash https://github.com/k3s-io/k3s/releases/download/v1.22.7+k3s1/sha256sum-arm64.txt
+[INFO]  Downloading binary https://github.com/k3s-io/k3s/releases/download/v1.22.7+k3s1/k3s-arm64
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Skipping installation of SELinux RPM
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Creating /usr/local/bin/ctr symlink to k3s
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-agent-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s-agent.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s-agent.service
+[INFO]  Failed to find memory cgroup, you may need to add "cgroup_memory=1 cgroup_enable=memory" to your linux cmdline (/boot/cmdline.txt on a Raspberry Pi)
+[INFO]  systemd: Enabling k3s-agent unit
+Created symlink /etc/systemd/system/multi-user.target.wants/k3s-agent.service → /etc/systemd/system/k3s-agent.service.
+[INFO]  systemd: Starting k3s-agent
+fishy@pi2:~ $ sudo reboot
+Connection to 67.202.180.201 closed by remote host.
+Connection to 67.202.180.201 closed.
+
+C:\Users\gabej>ssh fishy@8.40.198.78
+fishy@8.40.198.78's password:
+Linux pim 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon May  2 02:40:52 2022 from 216.240.255.89
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+fishy@pim:~ $ sudo kubectl get nodes
+NAME   STATUS   ROLES                  AGE    VERSION
+pi1    Ready    <none>                 9m7s   v1.22.7+k3s1
+pim    Ready    control-plane,master   23m    v1.22.7+k3s1
+fishy@pim:~ $ sudo kubectl get nodes
+NAME   STATUS   ROLES                  AGE     VERSION
+pi1    Ready    <none>                 9m23s   v1.22.7+k3s1
+pim    Ready    control-plane,master   24m     v1.22.7+k3s1
+pi2    Ready    <none>                 3s      v1.22.7+k3s1
+fishy@pim:~ $ sudo cat /etc/rancher/k3s/k3s.yaml
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdGMyVnkKZG1WeUxXTmhRREUyTlRFME56WXpNemd3SGhjTk1qSXdOVEF5TURjeU5UTTRXaGNOTXpJd05ESTVNRGN5TlRNNApXakFqTVNFd0h3WURWUVFEREJock0zTXRjMlZ5ZG1WeUxXTmhRREUyTlRFME56WXpNemd3V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFSY0labkpRd2tZbkVSSnNRUitjMVFlOGNWa0JsZGd5RkJ3Z0NHc2Y5eHMKY3JOL1hlMVpheXp3U2l3RkxvcWUrTXpTUzBtbXo1WjNLb01kaStGOVN2UG1vMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVWROdUhvNEpEeEUrQ0N3OGZ5anp4CndOeEQyQTh3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUtYYkRJeS9UbkNKUG1PTXBVeU9QLzBLSldsQWxsMEYKbHNZcVR4U3NBeWNUQWlCQlhtTDUwd0ZpZENDMENYamlSOHhORHRxMVJqdUJYUnBCQ1lhcEdHTzVidz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://127.0.0.1:6443
+  name: default
+contexts:
+- context:
+    cluster: default
+    user: default
+  name: default
+current-context: default
+kind: Config
+preferences: {}
+users:
+- name: default
+  user:
+    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJrRENDQVRlZ0F3SUJBZ0lJSnVjQ1JTZlUxNlV3Q2dZSUtvWkl6ajBFQXdJd0l6RWhNQjhHQTFVRUF3d1kKYXpOekxXTnNhV1Z1ZEMxallVQXhOalV4TkRjMk16TTRNQjRYRFRJeU1EVXdNakEzTWpVek9Gb1hEVEl6TURVdwpNakEzTWpVek9Gb3dNREVYTUJVR0ExVUVDaE1PYzNsemRHVnRPbTFoYzNSbGNuTXhGVEFUQmdOVkJBTVRESE41CmMzUmxiVHBoWkcxcGJqQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJHUkNmUEFBOGhXemVBWDgKbmRWcUN6RjJoYnRnVnloeHFkeEt0R0RWakU0TmxTdGdXQlNoY1NPUXR0Q3IyVTh0SXV1bXY2Mm1WVmJEUjZZbwo5OTFhWFFLalNEQkdNQTRHQTFVZER3RUIvd1FFQXdJRm9EQVRCZ05WSFNVRUREQUtCZ2dyQmdFRkJRY0RBakFmCkJnTlZIU01FR0RBV2dCUllzOVVJaG9NRWpvUWE4UEZjamd3QUt1b2E2akFLQmdncWhrak9QUVFEQWdOSEFEQkUKQWlBTUZHMDh4ZDFJNERvUGIxd0Erc2VUNUUzU2J3dXF4UVJjZHdvZFlHQjBxUUlnRTE3Zk5YTTFsNjM4VFpqYQpPYTZ2c09BQWRvb0pMd3ZoSUdaNktiaFMycmM9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkakNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdFkyeHAKWlc1MExXTmhRREUyTlRFME56WXpNemd3SGhjTk1qSXdOVEF5TURjeU5UTTRXaGNOTXpJd05ESTVNRGN5TlRNNApXakFqTVNFd0h3WURWUVFEREJock0zTXRZMnhwWlc1MExXTmhRREUyTlRFME56WXpNemd3V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFTYzYwSHZzSjVQTENiU1gzSWpJclo5bm1DbmNCQlVGZkxkbDNYWEFIbnoKNGoxdG9BRkxQa0ZQdmM0Z1NpNGtpQmtzdHQreWcwcEhkaWsvL3Z1RTlPbCtvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVVdMUFZDSWFEQkk2RUd2RHhYSTRNCkFDcnFHdW93Q2dZSUtvWkl6ajBFQXdJRFJ3QXdSQUlnVjBqWmRiS3gvaDBRVXhYenJCeFh3c0N4M2FPU21XVWcKVnpVendHekJsTzhDSUF5aW01Q0dRZ0oxeWNya1dCQjVmZHVmc1JETzk3RnIyUHpaYjZXeTAzZ00KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    client-key-data: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUFvOWFjNnhwa1dnMVZxb2xPdmlMK3NBNDZCZGsrVWNKVitYMytNS3d3enVvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFWkVKODhBRHlGYk40QmZ5ZDFXb0xNWGFGdTJCWEtIR3AzRXEwWU5XTVRnMlZLMkJZRktGeApJNUMyMEt2WlR5MGk2NmEvcmFaVlZzTkhwaWozM1ZwZEFnPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=
+fishy@pim:~ $ exit
