@@ -1,0 +1,15 @@
+First, raspberry pi immager was downloaded onto the PC
+Rasbparian lite 64 bit was installed on every microSD card and then installed into the pis
+once in, the following command was executed on each pi to get its IP: "Sudo ip a"
+the ssh was installed and updated with the following commands: "sudo apt install ssh" and "sudo apt uprade -y"
+the system was allowed to update and then the following command was given to ensure the SSH was working: "sudo systemclt status ssh" 
+after this the pi was access through ssh through a desktop PC
+the following command was executed to open/edit a file: "sudo cat /boot/cmdline.txt
+      after the "rootwait" the following was inputed: "cgroup_memory=1 cgroup_enable=memory"
+the pi was allowed to restart
+
+from here, the following command was exectured to instal the correct software and start the master node: "curl -sfl https://get.k3s.io | sh -"
+it was allowed to install, and the following command was executed to check the success: "sudo Kubectl get nodes"
+after this the following comman was exectued on the master node to get the token: "sudo cat /var/lib/rancher/k3s/server/node-token"
+this token was placed into the following command and was executed on the three other nodes: "curl -sfL https://get.k3s.io | K3S_URL=https://8.40.198.78:6443 K3S_TOKEN=K1061db9444c18d991327a05d088ed202bff08de8fbca0f40353c3018c69e115afb::server:0f3d371d5a525eac57791d32dcc6d3d5 sh -?
+this was done to all three nodes 
